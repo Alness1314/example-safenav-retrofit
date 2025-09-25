@@ -27,7 +27,7 @@ class NotificationsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.postValue(UiState.Loading)
             try {
-                val list = repo.getList("/users", clazz = UserResponse::class.java)
+                val list = repo.getList("/v1/api/users", clazz = UserResponse::class.java)
 
                 _users.postValue(list)
                 _uiState.postValue(UiState.Success)

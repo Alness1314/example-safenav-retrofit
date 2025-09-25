@@ -16,7 +16,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
     private const val DEFAULT_TIMEOUT = 60L
-    private const val BASE_URL = "https://089f3681c46d.ngrok-free.app"
+    private const val BASE_URL = "https://edfa0f071b78.ngrok-free.app"
 
     @Provides
     @Singleton

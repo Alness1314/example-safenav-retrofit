@@ -9,7 +9,20 @@
         android:id="@+id/navigation_home"
         android:name="com.alness.myapplication.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_eventFragment"
+            app:destination="@id/eventFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_receptionsFragment"
+            app:destination="@id/receptionsFragment"/>
+        <action
+            android:id="@+id/action_navigation_home_to_deliveriesFragment"
+            app:destination="@id/deliveriesFragment"/>
+        <action
+            android:id="@+id/action_navigation_home_to_opsVolumetricFragment"
+            app:destination="@id/opsVolumetricFragment"/>
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -21,11 +34,10 @@
         android:id="@+id/navigation_notifications"
         android:name="com.alness.myapplication.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" >
+        tools:layout="@layout/fragment_notifications">
         <action
             android:id="@+id/action_notificationsFragment_to_userDetailFragment"
-            app:destination="@id/userDetailFragment"
-            />
+            app:destination="@id/userDetailFragment" />
     </fragment>
 
     <fragment
@@ -39,5 +51,45 @@
         <action
             android:id="@+id/action_userDetailFragment_to_navigation_notifications"
             app:destination="@id/navigation_notifications" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.alness.myapplication.ui.events.EventsFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_eventFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/receptionsFragment"
+        android:name="com.alness.myapplication.ui.receptions.ReceptionsFragment"
+        android:label="Receptions"
+        tools:layout="@layout/fragment_receptions">
+        <action
+            android:id="@+id/action_receptionsFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/deliveriesFragment"
+        android:name="com.alness.myapplication.ui.deliveries.DeliveriesFragment"
+        android:label="Deliveries"
+        tools:layout="@layout/fragment_deliveries">
+        <action
+            android:id="@+id/action_deliveriesFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/opsVolumetricFragment"
+        android:name="com.alness.myapplication.ui.operations.OpsVolumetricFragment"
+        android:label="Ops Volumetric"
+        tools:layout="@layout/fragment_ops_volumetric">
+        <action
+            android:id="@+id/action_opsVolumetricFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 </navigation>
