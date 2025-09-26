@@ -71,6 +71,9 @@
         <action
             android:id="@+id/action_receptionsFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_receptionsFragment_to_detail_reception_fragment"
+            app:destination="@id/detail_reception_fragment" />
     </fragment>
 
     <fragment
@@ -91,5 +94,15 @@
         <action
             android:id="@+id/action_opsVolumetricFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_reception_fragment"
+        android:name="com.alness.myapplication.ui.detailreception.DetailReceptionFragment"
+        android:label="Detail Reception"
+        tools:layout="@layout/fragment_detail_reception">
+        <action
+            android:id="@+id/action_detail_reception_fragment_to_receptionsFragment"
+            app:destination="@id/receptionsFragment" />
     </fragment>
 </navigation>

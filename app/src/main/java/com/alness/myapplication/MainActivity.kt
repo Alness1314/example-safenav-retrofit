@@ -21,7 +21,6 @@ import java.io.File
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     private lateinit var photoUri: Uri
 
     // Launcher para pedir permiso de cámara
